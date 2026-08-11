@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#009dff;
+    filter:blur(170px);
+    opacity:.10;
+    top:-180px;
+    right:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#0047ff;
+    filter:blur(170px);
+    opacity:.08;
+    bottom:-180px;
+    left:-150px;
+    z-index:-1;
+}
+
+.navbar{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1200px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:rgba(18,18,18,.75);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,180,255,.15);
+    border-radius:50px;
+
+    z-index:100;
+}
+
+.logo{
+    color:#00b4ff;
+    font-size:30px;
+    font-weight:700;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.navbar a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#00b4ff;
+}
+
+
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:0 10%;
+}
+
+.intro{
+    color:#00b4ff;
+    letter-spacing:5px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:80px;
+    margin:15px 0;
+    line-height:90px;
+}
+
+.hero h3{
+    color:#9ca3af;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.heroText{
+    color:#cbd5e1;
+    max-width:650px;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(90deg,#009dff,#005eff);
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px rgba(0,180,255,.6);
+}
+
+
+.about{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+    align-items:center;
+    padding:100px 10%;
+}
+
+.about h2{
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.about p{
+    color:#cbd5e1;
+    line-height:2;
+}
+
+.aboutRight{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.infoCard{
+    background:#101010;
+    padding:28px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.infoCard h4{
+    color:#00b4ff;
+    margin-bottom:10px;
+}
+
+.infoCard:hover{
+    transform:translateY(-8px);
+    border-color:#00b4ff;
+    box-shadow:0 0 25px rgba(0,180,255,.2);
+}
+
+
+.skillsSection{
+    min-height:100vh;
+    padding:100px 10%;
+}
+
+.skillsSection h2{
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.skillContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:25px;
+}
+
+.skillCard{
+    background:#101010;
+    border:1px solid rgba(255,255,255,.05);
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skillCard:hover{
+    transform:translateY(-8px);
+    background:linear-gradient(135deg,#005eff,#009dff);
+    box-shadow:0 0 30px rgba(0,180,255,.4);
+}
+
+
+.footer{
+    text-align:center;
+    padding:80px 20px;
+    background:#090909;
+    margin:80px 5% 30px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.footer h2{
+    color:#00b4ff;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#bfc9d4;
+    margin:10px 0;
+}
+
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#009dff;
+    border-radius:20px;
+}
+
+.active{
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+@media(max-width:900px){
+
+.hero{
+    text-align:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:50px;
+    line-height:60px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+    border-radius:25px;
+}
+
+.navbar ul{
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+}
